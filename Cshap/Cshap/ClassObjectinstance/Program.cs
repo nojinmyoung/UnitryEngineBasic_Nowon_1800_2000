@@ -32,11 +32,25 @@ namespace ClassObjectinstance
             // tempChar;
             // Console.WriteLine($"성별 : {tempChar}");
 
+            Console.WriteLine(Human.instance.name);
+
+
+            Human human2 = new Human();
+            human2.height = 160.0f;
+            human2.name = "만수";
+            human2.Breath();
+
+            //Human.instance
+
         }
     }
     // 클래스도 사용자정의 '자료형'
     public class Human
     {
+        // static 키워드
+        // 객체화가 불가능한 키워드 --> human 클래스타입의 객체를 만들었을때 해당 객체는 instance 라는 멤버변수가 없다
+        public static Human instance;
+
         // 보호수준을 결정하는 접근 제한자
         // public : 접근 제한 없음
         // private : 해당 객체 외 접근 제한
@@ -68,8 +82,13 @@ namespace ClassObjectinstance
 
         public Human()
         {
-            height = 160.0f;
-            weight = 300.0f;
+            // this 키워드
+            // 객체 자기자신 참조 반환키워드
+            Console.WriteLine.(Human.instance = this);
+
+            this.height = 160.0f;
+            this.weight = 300.0f;
+            this.isReseting = false;
 
         }
         
@@ -83,7 +102,7 @@ namespace ClassObjectinstance
 
         public void Breath()
         {
-            Console.WriteLine($"{name} (이)가 숨을 쉰다");
+            Console.WriteLine($"{this.name} (이)가 숨을 쉰다");
         }
     }
 }
