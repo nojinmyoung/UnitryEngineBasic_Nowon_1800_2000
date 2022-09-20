@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace Operators
 {
@@ -64,16 +65,16 @@ namespace Operators
             Console.WriteLine(a != b);
 
             // 큰지 비교
-            onsole.WriteLine(a > b);
+           Console.WriteLine(a > b);
 
             // 큰나 같은지 비교
-            onsole.WriteLine(a >= b);
+            Console.WriteLine(a >= b);
 
             // 작은지 비교
-            onsole.WriteLine(a < b);
+            Console.WriteLine(a < b);
 
             // 작거나 같은지 비교
-            onsole.WriteLine(a <= b);
+            Console.WriteLine(a <= b);
 
             //대입연산자
             // 더해서/빼서/곱해서/나누어서/나머지연산후를 대입하는 연산
@@ -108,8 +109,62 @@ namespace Operators
             //피연산자가  true 이면 false 반환, false 이면 ture 반환
             Console.WriteLine(!A);
 
+            // 조건부 논리 연산자
+            // conditional or / conditional and
+            //===================================================================
 
 
+            //conditional or
+            //앞쪽 피연산자가 true 일 경우 뒤의 피연산 하지않고 바로 true 반환
+            Console.WriteLine(A || B);
+
+            //conditional and
+            // 앞쪽 피연산자가 false 일 경우 뒤의 피연산자 연산하지 않고 바로 false 바환
+            Console.WriteLine(A && B);
+
+
+            // 비트 연산자
+            // or ,and, xor, not, shift-left, shift-right
+            //================================================================================
+
+            //or
+            Console.WriteLine(a | b);
+            // a == 14 == 2^3 + 2^2 + 2^1 ==...00001110
+            // b == 6 ==        2^2 + 2^1 ==...00000110
+            // or result                  ==...00001110 == 14
+
+            //and
+            Console.WriteLine(a | b);
+            // a == 14 == 2^3 + 2^2 + 2^1 ==...00001110
+            // b == 6 ==        2^2 + 2^1 ==...00000110
+            // and result                 ==...00001110 == 6
+
+            // 324 == (10^2 * 3) + (10^1 *2) + (10^0 *4)
+            // 324 == 256 + 64 + 4 = (2^8 * 1) + (2^6 *1) + (2^2 * 1)
+            //     ==..0000000001 01000100
+
+            //xor
+            Console.WriteLine(a ^ b);
+            // a == 14 == 2^3 + 2^2 + 2^1 ==...00001110
+            // b == 6 ==        2^2 + 2^1 ==...00000110
+            // xor result                 ==...00001000 == 8
+
+            //not 
+            Console.WriteLine(~a);
+            // a == 14 == 2^3 + 2^2 + 2^1 ==...00001110
+            // not result                 ==11111111111111111111111111111111001;
+            // 2의 보수 : 이전법에서 모든자리수를 반전하고 + 1
+            //(a = -a;) == (a = ~a + 1);
+
+            //shift - left
+            Console.WriteLine(a << 1);
+            // a == 14 == 2^3 + 2^2 + 2^1 ==...00001110
+            // shift - left result        == ..00011100
+
+            //shift - right
+            Console.WriteLine(a << 1);
+            // a == 14 == 2^3 + 2^2 + 2^1 ==...00001110
+            // shift - right result       == ..00000111
         }
     }
 }

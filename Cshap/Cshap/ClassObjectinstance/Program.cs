@@ -84,7 +84,7 @@ namespace ClassObjectinstance
         {
             // this 키워드
             // 객체 자기자신 참조 반환키워드
-            Console.WriteLine.(Human.instance = this);
+            Console.WriteLine(Human.instance = this);
 
             this.height = 160.0f;
             this.weight = 300.0f;
