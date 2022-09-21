@@ -13,11 +13,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassObjectinstance", "Clas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example01_ClassObjectectlnstance", "Example01_ClassObjectectlnstance\Example01_ClassObjectectlnstance.csproj", "{451EE69D-6EC9-4828-9E13-55E9D2E204EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Statment_if", "Statment_if\Statment_if.csproj", "{810EF632-5AE7-4167-8267-273A7ED2CC40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Statment_if", "Statment_if\Statment_if.csproj", "{810EF632-5AE7-4167-8267-273A7ED2CC40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Statment_Switchcase_And_Enum", "Statment_Switchcase_And_Enum\Statment_Switchcase_And_Enum.csproj", "{0D58AA76-8000-4F24-AF8A-028B8FE495FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Statment_Switchcase_And_Enum", "Statment_Switchcase_And_Enum\Statment_Switchcase_And_Enum.csproj", "{0D58AA76-8000-4F24-AF8A-028B8FE495FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Operators", "Operators\Operators.csproj", "{94B5DDF3-5AE6-4E20-9474-BC6827C89A85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Operators", "Operators\Operators.csproj", "{94B5DDF3-5AE6-4E20-9474-BC6827C89A85}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aray", "Aray\Aray.csproj", "{CDC23439-7986-426A-A967-D92FAE18C9AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7FF55AD8-C79E-4ED3-A6B5-83FF85153C30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Statment_Loop", "Statment_Loop\Statment_Loop.csproj", "{0358E2EC-AD54-41E8-8124-32FB239D81E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +63,14 @@ Global
 		{94B5DDF3-5AE6-4E20-9474-BC6827C89A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94B5DDF3-5AE6-4E20-9474-BC6827C89A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94B5DDF3-5AE6-4E20-9474-BC6827C89A85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDC23439-7986-426A-A967-D92FAE18C9AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDC23439-7986-426A-A967-D92FAE18C9AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDC23439-7986-426A-A967-D92FAE18C9AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC23439-7986-426A-A967-D92FAE18C9AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0358E2EC-AD54-41E8-8124-32FB239D81E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0358E2EC-AD54-41E8-8124-32FB239D81E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0358E2EC-AD54-41E8-8124-32FB239D81E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0358E2EC-AD54-41E8-8124-32FB239D81E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,34 +1,33 @@
 ﻿using System;
-using System.Net.Mail;
 
 namespace Statment_Switchcase_And_Enum
 {
-    // eunm 열거형 사용자정의 자료형
+    // enum 열거형 사용자정의 자료형
     // 기본적으로 System.int32 자료형
     enum PlayerStates
     {
-        Idie,
+        Idle,
         Move,
         Jump,
         Dash,
-        Attact,
+        Attack,
         Hurt,
-        Die,
-    }
-    // fiags 속성은 eunm 타입은 ToString() 변환시에 각 비트별로 string 변환해주는 속성이다.
-    [System.Flags]
-    enum Layer
-    {
-        None     = 0 << 0,    //==...0000000
-        Player   = 1 << 0,    //==...0000001
-        Enumy    = 1 << 1,    //==...0000010
-        Obstacle = 1 << 2,    //==...0000100
-        NPC      = 1 << 3,    //==...0001000
-        Wall     = 1 << 4,    //==...0010000
-               //targetlayer == //...0000111
+        Die
     }
 
-    internal class Program
+    // Flags 속성은 enum 타입의 ToString() 변환시에 각 비트별로 string 변환해주는 속성이다.
+    [Flags]
+    enum Layer
+    {
+        None = 0 << 0,  // == ...00000000
+        Player = 1 << 0,  // == ...00000001
+        Enemy = 1 << 1,  // == ...00000010
+        Obstacle = 1 << 2,  // == ...00000100
+        NPC = 1 << 3,  // == ...00001000
+        Wall = 1 << 4   // == ...00010000
+    }
+
+    class Program
     {
         static void Main(string[] args)
         {
@@ -37,10 +36,9 @@ namespace Statment_Switchcase_And_Enum
 
             switch (state)
             {
-                //break
                 case 0:
                     Console.WriteLine("상태가 0이다");
-                    break; // break 분기문 ; 현재 흐름에서 벗어남 (상위 문법에서 빠져나옴)
+                    break; // break 분기문 : 현재 흐름에서 벗어남 (상위 문법에서 빠져나옴)
                 case 1:
                     Console.WriteLine("상태가 1이다");
                     break;
@@ -49,11 +47,11 @@ namespace Statment_Switchcase_And_Enum
                     break;
                 default:
                     break;
-                    #endregion
             }
+            #endregion
 
             Player other = new Player();
-            Enemy ememy = new Enemy();
+            Enemy enemy = new Enemy();
             Obstacle obstacle = new Obstacle();
             NPC npc = new NPC();
             Wall wall = new Wall();
@@ -61,13 +59,13 @@ namespace Statment_Switchcase_And_Enum
 
             Player player = new Player();
 
-            Console.WriteLine(player.targetlayer);
+            Console.WriteLine(player.targetLayer);
 
-            player.state = PlayerStates.Attact;
+            player.state = PlayerStates.Attack;
             switch (player.state)
             {
-                case PlayerStates.Idie:
-                    Console.WriteLine("플레이어는 아무것도 안하고 있다");
+                case PlayerStates.Idle:
+                    Console.WriteLine("플레이어는 아무것도 안하고있다");
                     break;
                 case PlayerStates.Move:
                     Console.WriteLine("플레이어는 움직이고있다");
@@ -78,27 +76,27 @@ namespace Statment_Switchcase_And_Enum
                 case PlayerStates.Dash:
                     Console.WriteLine("플레이어는 돌진하고있다");
                     break;
-                case PlayerStates.Attact:                   
+                case PlayerStates.Attack:
                     {
                         Console.WriteLine("플레이어는 공격하고있다");
 
-                        if((other.layer & player.targetlayer) == other.layer)
-                            Console.WriteLine($"{player} 는 {other}를 공격한다");
+                        if ((other.layer & player.targetLayer) == other.layer)
+                            Console.WriteLine($"{player} 는 {other} 를 공격한다");
 
-                        if ((ememy.layer & player.targetlayer) == ememy.layer)
-                            Console.WriteLine($"{player} 는 {ememy}를 공격한다");
+                        if ((enemy.layer & player.targetLayer) == enemy.layer)
+                            Console.WriteLine($"{player} 는 {enemy} 를 공격한다");
 
-                        if ((obstacle.layer & player.targetlayer) == obstacle.layer)
-                            Console.WriteLine($"{player} 는 {obstacle}를 공격한다");
+                        if ((obstacle.layer & player.targetLayer) == obstacle.layer)
+                            Console.WriteLine($"{player} 는 {obstacle} 를 공격한다");
 
-                        if ((npc.layer & player.targetlayer) == npc.layer)
-                            Console.WriteLine($"{player} 는 {npc}를 공격한다");
+                        if ((npc.layer & player.targetLayer) == npc.layer)
+                            Console.WriteLine($"{player} 는 {npc} 를 공격한다");
 
-                        if ((wall.layer & player.targetlayer) == wall.layer)
-                            Console.WriteLine($"{player} 는 {wall}를 공격한다");
+                        if ((wall.layer & player.targetLayer) == wall.layer)
+                            Console.WriteLine($"{player} 는 {wall} 를 공격한다");
+
                     }
                     break;
-
                 case PlayerStates.Hurt:
                     Console.WriteLine("플레이어는 공격받고있다");
                     break;
@@ -108,33 +106,28 @@ namespace Statment_Switchcase_And_Enum
                 default:
                     break;
             }
-
         }
     }
 
     class Player
     {
         public Layer layer = Layer.Player;
-        public Layer targetlayer = Layer.Player; 
+        public Layer targetLayer = Layer.Player | Layer.Enemy | Layer.Obstacle;
         public PlayerStates state;
-        public void Attact()
+        public void Attack()
         {
 
         }
     }
-
     class Enemy
     {
-        public  Layer layer = Layer.Enumy;
-
+        public Layer layer = Layer.Enemy;
     }
-
 
     class Obstacle
     {
         public Layer layer = Layer.Obstacle;
     }
-
 
     class NPC
     {
@@ -144,6 +137,5 @@ namespace Statment_Switchcase_And_Enum
     class Wall
     {
         public Layer layer = Layer.Wall;
-    } 
-
+    }
 }
