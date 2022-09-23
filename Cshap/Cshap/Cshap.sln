@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aray", "Aray\Aray.csproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7FF55AD8-C79E-4ED3-A6B5-83FF85153C30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Statment_Loop", "Statment_Loop\Statment_Loop.csproj", "{0358E2EC-AD54-41E8-8124-32FB239D81E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Statment_Loop", "Statment_Loop\Statment_Loop.csproj", "{0358E2EC-AD54-41E8-8124-32FB239D81E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exemple02_Aray2D", "Exemple02_Aray2D\Exemple02_Aray2D.csproj", "{A9C18F7D-31F4-470A-8ED2-2A6DAD8914CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,10 @@ Global
 		{0358E2EC-AD54-41E8-8124-32FB239D81E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0358E2EC-AD54-41E8-8124-32FB239D81E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0358E2EC-AD54-41E8-8124-32FB239D81E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9C18F7D-31F4-470A-8ED2-2A6DAD8914CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9C18F7D-31F4-470A-8ED2-2A6DAD8914CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9C18F7D-31F4-470A-8ED2-2A6DAD8914CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9C18F7D-31F4-470A-8ED2-2A6DAD8914CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

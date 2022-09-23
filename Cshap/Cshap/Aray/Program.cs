@@ -37,7 +37,7 @@ namespace Aray
 
             string[] arrString = new string[3];
             arrString[0] = "김아무개";
-            arrString[1] = "아라무개";
+            arrString[1] = "이아무개";
             arrString[2] = "박아무개";
             Console.WriteLine(arrString[0]);
         }

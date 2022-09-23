@@ -25,9 +25,9 @@ namespace Statment_Loop
 
             string name = "Luke";
             count = 0;
-            while (count < name.Length)
+            while (true)
             {
-                Console.WriteLine(name[count]);
+                Printint(arrint[count] );
                 count++;
             }
 
@@ -36,11 +36,17 @@ namespace Statment_Loop
                 Console.WriteLine("Do while test");
             } while (false);
 
+
             //for (인덱스변수 초기화; for문 반복조건; 루프 한번 실행후에 수행할 연산)
             for (int i = 0; i < arrint.Length; i++)
             {
                 Console.WriteLine(arrint[i]);
-            }
+            }            
+        }
+
+        private static void Printint(int num)
+        {
+                Console.WriteLine(num);
         }
     }
 }
