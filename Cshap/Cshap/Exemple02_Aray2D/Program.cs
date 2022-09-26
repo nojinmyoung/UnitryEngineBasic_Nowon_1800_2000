@@ -48,9 +48,9 @@ namespace Exemple02_Aray2D
 
         static void DisPlayeMap()
         {
-            for (int j = 0; j < map.GetLength(0); j++)
+            for (int j = 0; j < map.GetLength(0); j++) //GetLength(0) y축
             {
-                for (int i = 0; i < map.GetLength(1); i++)
+                for (int i = 0; i < map.GetLength(1); i++) //GetLength(1) x축
                 {
                     if (map[j, i] == 0)
                         Console.Write("□");
