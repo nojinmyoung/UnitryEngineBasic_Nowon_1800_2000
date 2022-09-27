@@ -25,17 +25,17 @@ namespace Exemple02_Aray2D
 
                 switch (input)
                 {
-                    case "L":
+                    case "MoveLeft":
                         player.MoveLeft(map);
                         break;
-                    case "R":
-                        player.MoveRight(map);
+                    case "MoveRight":
+                        player.MoveRight();
                         break;
-                    case "D":
-                        player.MoveDown(map);
+                    case "MoveDown":
+                        player.MoveDown();
                         break;
-                    case "U":
-                        player.MoveUp(map);
+                    case "MoveUp":
+                        player.MoveUp();
                         break;
                     default:
                         Console.WriteLine("Wrong input");
@@ -48,9 +48,9 @@ namespace Exemple02_Aray2D
 
         static void DisPlayeMap()
         {
-            for (int j = 0; j < map.GetLength(0); j++) //GetLength(0) y축
+            for (int j = 0; j < map.GetLength(0); j++)
             {
-                for (int i = 0; i < map.GetLength(1); i++) //GetLength(1) x축
+                for (int i = 0; i < map.GetLength(1); i++)
                 {
                     if (map[j, i] == 0)
                         Console.Write("□");
@@ -89,45 +89,17 @@ namespace Exemple02_Aray2D
                     Console.WriteLine($"플레이어 왼쪽으로 한칸 이동함, 현재 위치 : {_x}, {_y}");
                 }
             }
-            public void MoveRight(int[,] map)
+            public void MoveRight()
             {
-                if (_x + 1 > map.GetLength(1) -1)
-                    Console.WriteLine($"플레이어를 오른쪽으로 이동시킬 수 없습니다. (경계 초과) 현재위치 : {_x}, {_y}");
-                else if (map[_y, _x + 1] != 0)
-                    Console.WriteLine($"플레이어를 오른쪽으로 이동시킬 수 없습니다. (길이 없음) 현재위치 : {_x}, {_y}");
-                else
-                {
-                    map[_y, _x++] = 0;
-                    map[_y, _x] = 2;
-                    Console.WriteLine($"플레이어를 오른쪽으로 한칸 이동함, 현재위치 : {_x}, {_y}");
 
-                }
             }
-            public void MoveDown(int[,] map)
+            public void MoveDown()
             {
-                if (_y + 1 > map.GetLength(0))
-                    Console.WriteLine($"플레이어를 아래쪽으로 이동시킬 수 없습니다. (경계 초과) 현재위치 {_x}, {_y}");
-                else if (map[_y + 1, _x] != 0)
-                    Console.WriteLine($"플레이어를 아래쪽으로 이동시킬 수 없습니다. (길이 없음) 핸재위치 {_x}, {_y}");
-                else
-                {
-                    map[_y++, _x] = 0;
-                    map[_y, _x] = 2;
-                    Console.WriteLine($"플레이어를 아래쪽으로 한칸 이동함. 현재위치 : {_x}, {_y}");
-                }
+
             }
-            public void MoveUp(int[,] map)
+            public void MoveUp()
             {
-                if (_y - 1 < 0)
-                    Console.WriteLine($"플레이어를 위쪽으로 이동시킬 수 없습니다. (경계 초과) 현재위치 {_x}, {_y}");
-                else if (map[_y - 1, _x] != 0)
-                    Console.WriteLine($"플레이어를 위쪽으로 이동시킬 수 없습니다. (길이 없음) 현재위치 {_x}, {_y}");
-                else
-                {
-                    map[_y--, _x] = 0;
-                    map[_y, _x] = 2;
-                    Console.WriteLine($"플레이어를 위쪽으로 한칸 이동함, 현재위치 : {_x}, {_y}");
-                }
+
             }
 
         }
