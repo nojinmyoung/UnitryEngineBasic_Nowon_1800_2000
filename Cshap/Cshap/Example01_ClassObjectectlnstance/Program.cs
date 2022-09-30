@@ -64,7 +64,7 @@ namespace Example01_ClassObjectectlnstance
             orc2.Smach();
 
         }
-    }
+        }
     public class Orc
     {
         private bool _isDateSaved;
