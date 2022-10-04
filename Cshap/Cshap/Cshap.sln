@@ -31,9 +31,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Structure", "Stucture\Struc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exemple03_HorseRacing", "Exemple03_HorseRacing\Exemple03_HorseRacing.csproj", "{7C2A2C81-37F5-4D5F-92E3-E656A54EB8F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassInheritance", "ClassInheritance\ClassInheritance.csproj", "{09E85B09-D9E7-4EB8-89D0-B685E82D5FA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassInheritance", "ClassInheritance\ClassInheritance.csproj", "{09E85B09-D9E7-4EB8-89D0-B685E82D5FA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collections\Collections.csproj", "{9B2D4963-37FF-43DC-9517-174D233ABC23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections", "Collections\Collections.csproj", "{9B2D4963-37FF-43DC-9517-174D233ABC23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDynamicAray", "MyDynamicAray\MyDynamicAray.csproj", "{682C9549-BA4B-47D6-A0A1-DC294C7A9804}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +103,10 @@ Global
 		{9B2D4963-37FF-43DC-9517-174D233ABC23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B2D4963-37FF-43DC-9517-174D233ABC23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B2D4963-37FF-43DC-9517-174D233ABC23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{682C9549-BA4B-47D6-A0A1-DC294C7A9804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{682C9549-BA4B-47D6-A0A1-DC294C7A9804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{682C9549-BA4B-47D6-A0A1-DC294C7A9804}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{682C9549-BA4B-47D6-A0A1-DC294C7A9804}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
