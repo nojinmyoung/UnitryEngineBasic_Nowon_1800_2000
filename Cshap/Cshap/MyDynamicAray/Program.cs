@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MyDynamicAray
+namespace MyDynamicArray
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-          List<int> list = new List<int>();
-            list.Add(1);   
+            List<int> list = new List<int>();
+            list.Add(1);
             list.Add(2);
             list.Add(3);
             list.Add(4);
@@ -25,31 +25,32 @@ namespace MyDynamicAray
                 Console.WriteLine(item);
             }
 
-            IEnumerator<int> eumaerator = list.GetEnumerator();
-
-            while (eumaerator.MoveNext())
+            // foreach 문 구현 원리
+            using (IEnumerator<int> enumerator = list.GetEnumerator())
             {
-                Console.WriteLine(eumaerator.Current);
+                while (enumerator.MoveNext())
+                {
+                    Console.WriteLine(enumerator.Current);
+                }
             }
 
-            MyDynamicAray dynamicAray = new MyDynamicAray();
-            dynamicAray.Add(1); 
-            dynamicAray.Add(2);
-            dynamicAray.Add(3);
-            dynamicAray.Add(4);
-            dynamicAray.Remove(1);
-            Console.WriteLine(dynamicAray[0]);
+            MyDynamicArray<int> dynamicArray = new MyDynamicArray<int>();
+            dynamicArray.Add(1);
+            dynamicArray.Add(2);
+            dynamicArray.Add(3);
+            dynamicArray.Add(4);
+            dynamicArray.Remove(1);
+            Console.WriteLine(dynamicArray[0]);
 
-
-            for (int i = 0; i < dynamicAray.Count; i++)
+            for (int i = 0; i < dynamicArray.Count; i++)
             {
-                Console.WriteLine(dynamicAray[i]);
+                Console.WriteLine(dynamicArray[i]);
             }
 
-           // foreach (int item in dynamicAray)
-           // {
-           //
-           // }
+            foreach (int item in dynamicArray)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
